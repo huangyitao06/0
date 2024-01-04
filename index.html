@@ -8,29 +8,52 @@
     <style>  
         /* CSS for desktop */  
         @media only screen and (min-width: 768px) {  
+            body {  
+                background-image: url('https://t.mwm.moe/pc/');  
+                background-repeat: no-repeat;  
+                background-size: cover;  
+            }  
             /* Your desktop styles here */  
         }  
   
         /* CSS for mobile */  
         @media only screen and (max-width: 767px) {  
+            body {  
+                background-image: url('https://t.mwm.moe/mp/');  
+                background-repeat: no-repeat;  
+                background-size: cover;  
+            }  
             /* Your mobile styles here */  
+        }  
+  
+        /* 定义时间居中样式 */  
+        .centered-time {  
+            font-family: 宋体, sans-serif; /* 指定字体为Arial */  
+            font-size: 150px; /* 调整为你需要的放大倍数 */  
+            text-align: center;  /* 这会使文字居中 */  
+        }  
+  
+        /* 定义所有文本居中样式 */  
+        body {  
+font-size: 80px; /* 调整为你需要的放大倍数 */  
+font-family: 宋体, sans-serif; /* 指定字体为Arial */  
+            text-align: center;  /* 这会使所有文本居中 */  
         }  
     </style>  
 </head>  
   
 <body>  
-    <h1>当前服务器时间：</h1>  
-    <p id="serverTime"></p>  
+    <h1>当前服务器时间：</h1>  <!-- 文本居中显示 -->  
+    <p id="serverTime" class="centered-time"></p>  <!-- 时间居中显示 -->  
     <script>  
-        function getServerTime() {  
-            // 这里只是模拟获取服务器时间，实际应用中你可能需要从服务器API获取时间  
-            const now = new Date();  
-            const serverTime = now.toLocaleString();  
-            document.getElementById('serverTime').innerText = serverTime;  
-        }  
-        getServerTime(); // 首次加载时获取时间  
-        setInterval(getServerTime, 1000); // 每秒更新时间  
-    </script>  
-</body>  
+        function getServerTime() {  // 模拟获取服务器时间，实际应用中可能需要从服务器API获取时间  
+            const now = new Date();  // 获取当前时间  
+            const serverTime = now.toLocaleString();  // 将时间转换为字符串格式  
+            document.getElementById('serverTime').innerText = serverTime;  // 更新页面上的时间显示  
+        }  // 首次加载时获取时间，并每秒更新时间显示  
+        getServerTime();  // 首次加载时获取时间  
+        setInterval(getServerTime, 1000);  // 每秒更新时间显示  
+    </script>  <!-- JavaScript代码结束 -->  
+</body>  <!-- body元素结束 -->  
   
-</html>
+</html> <!-- HTML文档结束 -->
