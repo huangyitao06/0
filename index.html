@@ -6,25 +6,26 @@
     <title>Responsive Page</title>  
     <style>  
         /* 基础样式 */  
-        .pc-only {  
+        .pc-content {  
             display: block;  
         }  
-        .mobile-only {  
+        .mobile-content {  
             display: none;  
+        }  
+  
+        /* 针对手机的媒体查询 */  
+        @media only screen and (max-width: 600px) {  
+            .mobile-content {  
+                display: block;  
+            }  
+            .pc-content {  
+                display: none;  
+            }  
         }  
     </style>  
 </head>  
 <body>  
-    <h1 class="pc-only">This is for PC</h1>  
-    <h1 class="mobile-only">This is for Mobile</h1>  
-  
-    <script>  
-        // 判断设备类型并改变样式类  
-        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){   
-            document.body.classList.add('mobile');  
-        } else {  
-            document.body.classList.add('pc');  
-        }  
-    </script>  
+    <h1 class="pc-content">This is for PC</h1>  
+    <h1 class="mobile-content">This is for Mobile</h1>  
 </body>  
-</html>3
+</html>
