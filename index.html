@@ -1,27 +1,30 @@
 <!DOCTYPE html>  
-<html>  
+<html lang="en">  
 <head>  
-  <title>{{ title }}</title>  
-  <style>  
-    body {  
-      font-family: Arial, sans-serif;  
-    }  
-  </style>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Responsive Page</title>  
+    <style>  
+        /* 基础样式 */  
+        .pc-only {  
+            display: block;  
+        }  
+        .mobile-only {  
+            display: none;  
+        }  
+    </style>  
 </head>  
 <body>  
-<img src="https://static.91haoka.cn/1698662132PSl.jpg" style="border-radius: 10px;width: 100%;">
-<iframe src="http://psy0gdx5lfat6y0p.mikecrm.com/1YalisE" id="myIframe"></iframe>  
+    <h1 class="pc-only">This is for PC</h1>  
+    <h1 class="mobile-only">This is for Mobile</h1>  
   
-<style>  
-    #myIframe {  
-        width: 100%;  /* 或其他宽度 */  
-        height: 1500px;  /* 或其他高度 */  
-    }  
-.copyright {  
-    display: none;  
-}
-    }  
-</style>
-<img src="https://hk.maikajie.com/upload/des_657ff9cf5d36d_1.png" style="border-radius: 10px;width: 100%;">
+    <script>  
+        // 判断设备类型并改变样式类  
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){   
+            document.body.classList.add('mobile');  
+        } else {  
+            document.body.classList.add('pc');  
+        }  
+    </script>  
 </body>  
-</html>
+</html>3
