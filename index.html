@@ -1,62 +1,11 @@
-<!DOCTYPE html>  
-<html lang="zh">  
-  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>当前时间 - 黄屹涛的网站</title>  
-    <style>  
-        body {  
-            margin: 0;  
-            padding: 0;  
-            background-size: cover;  
-            background-position: center;  
-            background-repeat: no-repeat;  
-            display: flex;  
-            justify-content: center;  
-            align-items: center;  
-            height: 100vh;  
-        }  
-  
-        /* CSS for desktop */  
-        @media only screen and (min-width: 768px) {  
-            body {  
-                background-image: url('https://t.mwm.moe/pc/');  
-            }  
-            #serverTime {  
-                font-size: 100px; /* 设置时间字体大小为适合桌面的大小 */  
-            }  
-        }  
-  
-        /* CSS for mobile */  
-        @media only screen and (max-width: 767px) {  
-            body {  
-                background-image: url('https://t.mwm.moe/mp/');  
-            }  
-            #serverTime {  
-                font-size: 25px; /* 设置时间字体大小为适合手机的大小 */  
-            }  
-        }  
-    </style>  
-</head>  
-  
-<body>  
-    <h1 id="serverTime"></h1> <!-- 时间显示 -->  
-    <script>  
-        function getServerTime() {  
-            const now = new Date(); // 获取当前时间  
-            const year = now.getFullYear(); // 获取年份  
-            const month = String(now.getMonth() + 1).padStart(2, '0'); // 获取月份（注意JavaScript中月份是从0开始的）并格式化为两位数  
-            const date = String(now.getDate()).padStart(2, '0'); // 获取日期并格式化为两位数  
-            const hours = String(now.getHours()).padStart(2, '0'); // 获取小时并格式化为两位数  
-            const minutes = String(now.getMinutes()).padStart(2, '0'); // 获取分钟并格式化为两位数  
-            const seconds = String(now.getSeconds()).padStart(2, '0'); // 获取秒数并格式化为两位数  
-            const formattedTime = `${year}年${month}月${date}日 ${hours}时${minutes}分${seconds}秒`; // 组合成所需格式的时间字符串  
-            document.getElementById('serverTime').innerText = formattedTime; // 更新页面上的时间显示  
-        }  
-        getServerTime(); // 首次加载时获取时间  
-        setInterval(getServerTime, 1000); // 每秒更新时间显示  
-    </script> <!-- JavaScript代码结束 -->  
-</body> <!-- body元素结束 -->  
-  
-</html> <!-- HTML文档结束 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+    <h1>我的第一个标题</h1>
+    <p>我的第一个段落。</p><a href="/yd_06_20_25_06_08.json">
+</body>
+</html>
