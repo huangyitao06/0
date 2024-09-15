@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订单 - 浙江佰丰集团有限公司</title>
+
+    <style>
+        /* 全局样式 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        /* 页眉样式 */
+        header {
+            background-color: #007BFF;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* 包含头像和问候语的容器样式 */
+      .profile {
+            display: flex;
+            align-items: center;
+        }
+
+        /* 头像容器样式 */
+      .image-container {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border: 3px solid white;
+        }
+
+        /* 头像图片样式 */
+      .image-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* 问候语文本样式 */
+      .greeting {
+            color: white;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+        /* 订单列表样式 */
+      .order-list {
+            list-style: none;
+            padding: 30px;
+        }
+
+        /* 单个订单项样式 */
+      .order-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        /* 鼠标悬停在订单项上的样式 */
+      .order-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 产品图片样式 */
+      .product-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        /* 订单信息容器样式 */
+      .item-info {
+            flex: 1;
+        }
+
+        /* 订单信息文本样式 */
+      .item-info span {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        /* 提现按钮样式 */
+      .withdraw-btn {
+            padding: 10px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 鼠标悬停在提现按钮上的样式 */
+      .withdraw-btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>订单列表</h1>
+        <div class="profile">
+            <div class="image-container">
+                <img src="https://c-ssl.dtstatic.com/uploads/blog/202304/15/20230415081411_9a88c.thumb.1000_0.jpg" alt="图片">
+            </div>
+            <span class="greeting" id="greeting"></span>
+        </div>
+    </header>
+
+    <ul class="order-list">
+        <li class="order-item">
+            <img src="https://img.feihuang.vip/888553f6bf4f2f59.png" alt="产品 1" class="product-img">
+            <div class="item-info">
+                <span>订单编号：hk2407201035066928</span>
+                <span>结算单位：中国广电</span>
+                <span>产品名称：广电升龙卡【29元192G＋192分钟】</span>
+                <span>应结款项：￥20.00 元</span>
+                <span>税&emsp;&emsp;率：10%</span>
+                <span>实结款项：￥18.80 元</span>
+            </div>
+            <a href="https://qr.alipay.com/1qf18152wcup7umd1uby1f3" id="alipayLink1"><button
+                    class="withdraw-btn">提现</button></a>
+        </li>
+        <li class="order-item">
+            <img src="https://img.feihuang.vip/888553f6bf4f2f59.png" alt="产品 2" class="product-img">
+            <div class="item-info">
+                <span>订单编号：hk2407181014166360</span>
+                <span>结算单位：中国广电</span>
+                <span>产品名称：广电升龙卡【29元192G＋192分钟】</span>
+                <span>应结款项：￥20.00 元</span>
+                <span>税&emsp;&emsp;率：10%</span>
+                <span>实结款项：￥18.80 元</span>
+            </div>
+            <a href="https://qr.alipay.com/1qf19211qm3dnsn0ehw2xe7" id="alipayLink2"><button
+                    class="withdraw-btn">提现</button></a>
+        </li>
+        <li class="order-item">
+            <img src="https://img.feihuang.vip/888553f6bf4f2f59.png" alt="产品 3" class="product-img">
+            <div class="item-info">
+                <span>订单编号：jl2409151636066826</span>
+                <span>结算单位：浙江佰丰集团有限公司</span>
+                <span>产品名称：广电升龙卡【29元192G＋192分钟】销售奖励</span>
+                <span>应结款项：￥10.00 元</span>
+                <span>税&emsp;&emsp;率：10%</span>
+                <span>实结款项：￥9.40 元</span>
+            </div>
+            <a href="https://qr.alipay.com/1qf10439tqfddpocei3omed" id="alipayLink3"><button
+                    class="withdraw-btn">提现</button></a>
+        </li>
+    </ul>
+
+    <script>
+        // 获取当前小时数
+        const date = new Date();
+        const hours = date.getHours();
+        let greetingText;
+
+        // 根据时间判断问候语
+        if (hours >= 5 && hours < 12) {
+            greetingText = "早上好！";
+        } else if (hours >= 12 && hours < 18) {
+            greetingText = "下午好！";
+        } else {
+            greetingText = "晚上好！";
+        }
+
+        // 将问候语添加到页面元素中
+        const greetingElement = document.getElementById('greeting');
+        greetingElement.textContent = `尊敬的黄圣谦，${greetingText}`;
+
+        // 判断是否在支付宝环境
+        const isAlipay = /AlipayClient/.test(navigator.userAgent);
+
+        const alipayLinks = document.querySelectorAll('a[id^="alipayLink"]');
+        alipayLinks.forEach((link, index) => {
+            link.addEventListener('click', function (e) {
+                if (!isAlipay) {
+                    e.preventDefault();
+                    alert('请在支付宝环境中打开此链接进行提现操作');
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
